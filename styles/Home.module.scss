@@ -4,7 +4,7 @@ $dark: #0c1813;
 $dark-secondary: #242f2b;
 $accent: #82c792;
 
-$spacing: 10px;
+$spacing: 15px;
 
 .home {
   min-height: 100vh;
@@ -18,11 +18,30 @@ $spacing: 10px;
     padding: $spacing;
   }
 
+  a {
+    color: $light;
+    text-decoration: none;
+    transition: color 150ms ease;
+
+    & > svg {
+      transform: translateY(2.5px);
+    }
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
   .home__main {
     flex-grow: 1;
   }
 
   .home__footer {
     background: $dark-secondary;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing;
   }
 }

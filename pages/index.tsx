@@ -5,6 +5,8 @@ import { Work_Sans } from "next/font/google";
 
 const font = Work_Sans({ subsets: ["latin"] });
 
+import { FiGithub } from "react-icons/fi";
+
 const Home = (): JSX.Element => {
   return (
     <div className={`${Style.home} ${font.className}`}>
@@ -12,7 +14,15 @@ const Home = (): JSX.Element => {
         <title>Gaagle</title>
       </Head>
       <main className={Style.home__main}></main>
-      <footer className={Style.home__footer}></footer>
+      <footer className={Style.home__footer}>
+        <a href="https://github.com/gaasefod" target="_blank">
+          <FiGithub />
+        </a>
+        <span>•</span>
+        <a href="https://www.privacytools.io/" target="_blank">
+          Privacy
+        </a>
+      </footer>
     </div>
   );
 };
