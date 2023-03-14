@@ -1,3 +1,28 @@
+$light: #fbf7f6;
+$light-secondary: #b0adac;
+$dark: #0c1813;
+$dark-secondary: #242f2b;
+$accent: #82c792;
+
+$spacing: 10px;
+
 .home {
   min-height: 100vh;
+  background: $dark;
+  color: $light;
+
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    padding: $spacing;
+  }
+
+  .home__main {
+    flex-grow: 1;
+  }
+
+  .home__footer {
+    background: $dark-secondary;
+  }
 }
