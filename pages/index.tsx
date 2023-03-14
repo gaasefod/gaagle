@@ -5,7 +5,7 @@ import { Work_Sans } from "next/font/google";
 
 const font = Work_Sans({ subsets: ["latin"] });
 
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiSearch } from "react-icons/fi";
 
 const Home = (): JSX.Element => {
   return (
@@ -13,7 +13,17 @@ const Home = (): JSX.Element => {
       <Head>
         <title>Gaagle</title>
       </Head>
-      <main className={Style.home__main}></main>
+      <main className={Style.home__main}>
+        <div className={Style.main__wrapper}>
+          <div className={Style.wrapper__logo}></div>
+          <div className={Style.wrapper__search}>
+            <input className={Style.search__input} type="text" />
+            <button className={Style.search__go}>
+              <FiSearch />
+            </button>
+          </div>
+        </div>
+      </main>
       <footer className={Style.home__footer}>
         <a href="https://github.com/gaasefod" target="_blank">
           <FiGithub />

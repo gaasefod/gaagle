@@ -34,6 +34,71 @@ $spacing: 15px;
 
   .home__main {
     flex-grow: 1;
+
+    margin-top: calc($spacing * 12);
+    margin-bottom: calc($spacing * 12);
+
+    display: flex;
+    justify-content: center;
+
+    .main__wrapper {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+
+      .wrapper__logo {
+        background: url("/logo.svg") no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100px;
+        margin-bottom: calc($spacing * 4);
+      }
+
+      .wrapper__search {
+        position: relative;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        background: $dark-secondary;
+
+        display: flex;
+        align-items: center;
+
+        & > * {
+          padding: $spacing;
+        }
+
+        &:has(.search__input:focus) {
+          border-color: $accent;
+        }
+
+        .search__input {
+          flex-grow: 1;
+
+          border: none;
+          background: none;
+          outline: none;
+          min-width: 0;
+
+          color: $light;
+        }
+
+        .search__go {
+          background: none;
+          border: none;
+          outline: none;
+
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          color: $accent;
+          cursor: pointer;
+          transition: background 150ms ease;
+
+          &:hover {
+            background: transparentize($accent, 0.75);
+          }
+        }
+      }
+    }
   }
 
   .home__footer {
