@@ -7,7 +7,6 @@ const Home = (): JSX.Element => {
       <Head>
         <title>Gaagle</title>
       </Head>
-      <header className={Style.home__header}></header>
       <main className={Style.home__main}></main>
       <footer className={Style.home__footer}></footer>
     </div>
